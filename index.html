@@ -1,0 +1,1059 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Varun Sharma — First-year B.Tech CSE (Data Science & AI) student at JECRC University. Portfolio showcasing software development, machine learning, and AI projects.">
+  <meta name="keywords" content="Varun Sharma, Portfolio, Data Science, Artificial Intelligence, Machine Learning, Software Engineer, B.Tech CSE, JECRC University, Web Development">
+  <meta name="author" content="Varun Sharma">
+
+  <!-- Open Graph / Social Meta Tags -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Varun Sharma | Developer & AI Portfolio">
+  <meta property="og:description" content="First-year Computer Science student exploring Artificial Intelligence, Data Science, Software Development, and emerging technologies.">
+  <meta property="og:image" content="assets/images/avatar-monogram.svg">
+
+  <title>Varun Sharma | Developer &amp; AI Portfolio</title>
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="assets/icons/favicon.svg">
+
+  <!-- Google Fonts Preconnect -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700;800&family=Outfit:wght@400;500;600;700;800;900&family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+
+  <!-- Core Stylesheet -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Skip link for keyboard accessibility -->
+  <a href="#main-content" class="skip-to-content">Skip to main content</a>
+
+  <!-- Interactive Background Canvas & Ambient Orbs -->
+  <canvas id="bg-canvas" aria-hidden="true"></canvas>
+  <div class="ambient-glow glow-top-left" aria-hidden="true"></div>
+  <div class="ambient-glow glow-middle-right" aria-hidden="true"></div>
+  <div class="ambient-glow glow-bottom-left" aria-hidden="true"></div>
+  <div id="cursor-glow" aria-hidden="true"></div>
+
+  <!-- Top Scroll Progress Indicator -->
+  <div id="scroll-progress" role="progressbar" aria-label="Reading progress" aria-valuemin="0" aria-valuemax="100"></div>
+
+  <!-- =========================================================================
+       1. NAVIGATION HEADER
+       ========================================================================= -->
+  <header class="header" id="header">
+    <div class="container nav-container">
+      <a href="#hero" class="brand-logo" aria-label="Varun Sharma Home">
+        <span class="logo-badge">VS</span>
+        <span>VARUN SHARMA</span>
+      </a>
+
+      <!-- Desktop Navigation Menu -->
+      <nav class="nav-desktop" aria-label="Main Navigation">
+        <ul class="nav-menu">
+          <li><a href="#hero" class="nav-link active">Home</a></li>
+          <li><a href="#about" class="nav-link">About</a></li>
+          <li><a href="#skills" class="nav-link">Skills</a></li>
+          <li><a href="#projects" class="nav-link">Projects</a></li>
+          <li><a href="#education" class="nav-link">Education</a></li>
+          <li><a href="#experience" class="nav-link">Experience</a></li>
+          <li><a href="#contact" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+
+      <!-- Nav CTA & Mobile Menu Toggle -->
+      <div class="nav-actions">
+        <a href="#contact" class="btn btn-primary btn-sm">
+          <span>Let's Talk</span>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <line x1="5" y1="12" x2="19" y2="12"></line>
+            <polyline points="12 5 19 12 12 19"></polyline>
+          </svg>
+        </a>
+        <button class="menu-toggle" id="menu-toggle" aria-label="Open Navigation Menu" aria-expanded="false" aria-controls="mobile-nav">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <line x1="3" y1="12" x2="21" y2="12"></line>
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <line x1="3" y1="18" x2="21" y2="18"></line>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer Navigation -->
+  <div class="mobile-nav-backdrop" id="mobile-backdrop" aria-hidden="true"></div>
+  <aside class="mobile-nav" id="mobile-nav" aria-label="Mobile Navigation Drawer">
+    <div>
+      <div class="mobile-nav-header">
+        <div class="brand-logo">
+          <span class="logo-badge">VS</span>
+          <span>VARUN SHARMA</span>
+        </div>
+        <button class="mobile-close-btn" id="mobile-close-btn" aria-label="Close Navigation Menu">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <line x1="18" y1="6" x2="6" y2="18"></line>
+            <line x1="6" y1="6" x2="18" y2="18"></line>
+          </svg>
+        </button>
+      </div>
+      <ul class="mobile-nav-links">
+        <li><a href="#hero" class="mobile-nav-link active"><span>Home</span> <span aria-hidden="true">→</span></a></li>
+        <li><a href="#about" class="mobile-nav-link"><span>About</span> <span aria-hidden="true">→</span></a></li>
+        <li><a href="#skills" class="mobile-nav-link"><span>Skills</span> <span aria-hidden="true">→</span></a></li>
+        <li><a href="#projects" class="mobile-nav-link"><span>Projects</span> <span aria-hidden="true">→</span></a></li>
+        <li><a href="#education" class="mobile-nav-link"><span>Education</span> <span aria-hidden="true">→</span></a></li>
+        <li><a href="#experience" class="mobile-nav-link"><span>Experience</span> <span aria-hidden="true">→</span></a></li>
+        <li><a href="#github-activity" class="mobile-nav-link"><span>GitHub</span> <span aria-hidden="true">→</span></a></li>
+        <li><a href="#contact" class="mobile-nav-link"><span>Contact</span> <span aria-hidden="true">→</span></a></li>
+      </ul>
+    </div>
+    <div class="mobile-nav-footer">
+      <a href="#contact" class="btn btn-primary" style="width: 100%;">
+        <span>Let's Connect</span>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <line x1="5" y1="12" x2="19" y2="12"></line>
+          <polyline points="12 5 19 12 12 19"></polyline>
+        </svg>
+      </a>
+    </div>
+  </aside>
+
+  <!-- =========================================================================
+       MAIN CONTENT CONTAINER
+       ========================================================================= -->
+  <main id="main-content">
+
+    <!-- =======================================================================
+         2. HERO SECTION
+         ======================================================================= -->
+    <section class="hero" id="hero" aria-label="Introduction">
+      <div class="container">
+        <div class="hero-grid">
+          
+          <!-- Hero Text Content -->
+          <div class="hero-content reveal">
+            <div class="status-pill">
+              <span class="status-dot"></span>
+              <span>Available for Opportunities &amp; Collaborations</span>
+            </div>
+
+            <p class="hero-intro">HELLO, I'M</p>
+            <h1 class="hero-title">VARUN SHARMA</h1>
+            
+            <div class="hero-subtitle-container" aria-label="Specialization">
+              <span class="hero-typed-text" id="typed-subtitle">CSE • DATA SCIENCE • AI</span>
+            </div>
+
+            <p class="hero-description">
+              First-year Computer Science student specializing in Data Science &amp; AI at JECRC University. Passionate about exploring Artificial Intelligence, machine learning architectures, modern software development, and building innovative web applications.
+            </p>
+
+            <div class="hero-cta-group">
+              <a href="#projects" class="btn btn-primary">
+                <span>View My Work</span>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <line x1="12" y1="5" x2="12" y2="19"></line>
+                  <polyline points="19 12 12 19 5 12"></polyline>
+                </svg>
+              </a>
+              <a href="#contact" class="btn btn-secondary">
+                <span>Let's Connect</span>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <line x1="5" y1="12" x2="19" y2="12"></line>
+                  <polyline points="12 5 19 12 12 19"></polyline>
+                </svg>
+              </a>
+            </div>
+
+            <!-- Social Links -->
+            <div class="hero-socials" aria-label="Social Profiles">
+              <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="hero-social-link" aria-label="GitHub Profile">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+                </svg>
+              </a>
+              <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="hero-social-link" aria-label="LinkedIn Profile">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+                  <rect x="2" y="9" width="4" height="12"></rect>
+                  <circle cx="4" cy="4" r="2"></circle>
+                </svg>
+              </a>
+              <a href="mailto:varun.sharma.dev@example.com" class="hero-social-link" aria-label="Send Email">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                  <polyline points="22,6 12,13 2,6"></polyline>
+                </svg>
+              </a>
+            </div>
+          </div>
+
+          <!-- Hero Visual Monogram Card -->
+          <div class="hero-visual reveal reveal-delay-1">
+            <div class="glass-card hero-visual-card">
+              <div class="hero-avatar-wrapper">
+                <img src="assets/images/avatar-monogram.svg" alt="Varun Sharma Monogram Avatar" class="hero-avatar-img">
+              </div>
+              <div class="hero-card-meta">
+                <div class="hero-card-name">Varun Sharma</div>
+                <div class="hero-card-role">B.Tech CSE • Data Science &amp; AI</div>
+                <div class="hero-tags-pill-row">
+                  <span class="tag-pill">Python</span>
+                  <span class="tag-pill">Machine Learning</span>
+                  <span class="tag-pill">AI Agents</span>
+                  <span class="tag-pill">Web Dev</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- =======================================================================
+         3. ABOUT ME SECTION
+         ======================================================================= -->
+    <section class="section" id="about" aria-label="About Varun Sharma">
+      <div class="container">
+        <div class="section-header reveal">
+          <div class="section-tag">01 // ABOUT ME</div>
+          <h2 class="section-title">Driven by curiosity, fueled by code.</h2>
+          <p class="section-subtitle">
+            Exploring the intersection of data, computational intelligence, and software engineering.
+          </p>
+        </div>
+
+        <div class="about-grid">
+          <!-- Text Content -->
+          <div class="about-text reveal reveal-delay-1">
+            <p>
+              I am <span class="about-highlight">Varun Sharma</span>, a first-year undergraduate student pursuing my <strong>B.Tech in Computer Science Engineering with a specialization in Data Science &amp; Artificial Intelligence</strong> at <strong>JECRC University</strong>.
+            </p>
+            <p>
+              My focus centers on mastering the mathematical and practical foundations of machine learning, developing efficient algorithms, and architecting robust software systems. I believe the best way to grasp complex engineering concepts is by <strong>actively building projects from scratch</strong>.
+            </p>
+            <p>
+              My long-term aspiration is to build a career as a high-impact <strong>Software / Data / AI Engineer</strong>, creating transformative tools and intelligent applications that solve real-world problems.
+            </p>
+
+            <div class="about-interests">
+              <div class="interests-title">Core Focus &amp; Interests</div>
+              <div class="interests-chips">
+                <span class="interest-chip">Artificial Intelligence</span>
+                <span class="interest-chip">Machine Learning</span>
+                <span class="interest-chip">Data Science</span>
+                <span class="interest-chip">Generative AI</span>
+                <span class="interest-chip">AI Agents</span>
+                <span class="interest-chip">Software Engineering</span>
+                <span class="interest-chip">Data Analytics</span>
+                <span class="interest-chip">Data Structures &amp; Algorithms</span>
+                <span class="interest-chip">Problem Solving</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Authentic Metrics & Stats Grid -->
+          <div class="about-stats-grid reveal reveal-delay-2">
+            <div class="glass-card stat-card">
+              <div class="stat-value">01</div>
+              <div class="stat-label">Year of Study</div>
+            </div>
+            <div class="glass-card stat-card">
+              <div class="stat-value">B.Tech</div>
+              <div class="stat-label">Degree Track</div>
+            </div>
+            <div class="glass-card stat-card">
+              <div class="stat-value">DS &amp; AI</div>
+              <div class="stat-label">Specialization</div>
+            </div>
+            <div class="glass-card stat-card">
+              <div class="stat-value">∞</div >
+              <div class="stat-label">Curiosity</div>
+            </div>
+
+            <!-- Philosophy Callout -->
+            <div class="glass-card philosophy-card">
+              <p class="philosophy-quote">
+                "Learning by doing: turning theoretical mathematical concepts and algorithms into scalable, real-world implementations."
+              </p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- =======================================================================
+         4. SKILLS SECTION
+         ======================================================================= -->
+    <section class="section" id="skills" aria-label="Technical Skills">
+      <div class="container">
+        <div class="section-header reveal">
+          <div class="section-tag">02 // SKILLS</div>
+          <h2 class="section-title">Technical Toolbelt &amp; Foundations</h2>
+          <p class="section-subtitle">
+            Technologies and core competencies I actively study, practice, and utilize in my projects.
+          </p>
+        </div>
+
+        <div class="skills-grid">
+          
+          <!-- 1. Programming -->
+          <div class="glass-card skill-category-card reveal reveal-delay-1">
+            <div class="category-header">
+              <div class="category-icon-box">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <polyline points="16 18 22 12 16 6"></polyline>
+                  <polyline points="8 6 2 12 8 18"></polyline>
+                </svg>
+              </div>
+              <h3 class="category-title">Programming</h3>
+            </div>
+            <ul class="skill-items-list">
+              <li class="skill-item">
+                <span>Python</span>
+                <span class="skill-indicator" aria-hidden="true"></span>
+              </li>
+              <li class="skill-item">
+                <span>C</span>
+                <span class="skill-indicator" aria-hidden="true"></span>
+              </li>
+              <li class="skill-item">
+                <span>JavaScript</span>
+                <span class="skill-indicator" aria-hidden="true"></span>
+              </li>
+              <li class="skill-item">
+                <span>SQL</span>
+                <span class="skill-indicator" aria-hidden="true"></span>
+              </li>
+            </ul>
+          </div>
+
+          <!-- 2. Data & AI -->
+          <div class="glass-card skill-category-card reveal reveal-delay-2">
+            <div class="category-header">
+              <div class="category-icon-box">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2zm0 18a8 8 0 1 1 8-8 8 8 0 0 1-8 8z"></path>
+                  <path d="M12 6v6l4 2"></path>
+                </svg>
+              </div>
+              <h3 class="category-title">Data &amp; AI</h3>
+            </div>
+            <ul class="skill-items-list">
+              <li class="skill-item">
+                <span>Machine Learning</span>
+                <span class="skill-indicator" aria-hidden="true"></span>
+              </li>
+              <li class="skill-item">
+                <span>Data Science</span>
+                <span class="skill-indicator" aria-hidden="true"></span>
+              </li>
+              <li class="skill-item">
+                <span>Data Analytics</span>
+                <span class="skill-indicator" aria-hidden="true"></span>
+              </li>
+              <li class="skill-item">
+                <span>Generative AI</span>
+                <span class="skill-indicator" aria-hidden="true"></span>
+              </li>
+              <li class="skill-item">
+                <span>AI Agents</span>
+                <span class="skill-indicator" aria-hidden="true"></span>
+              </li>
+            </ul>
+          </div>
+
+          <!-- 3. Web Development -->
+          <div class="glass-card skill-category-card reveal reveal-delay-3">
+            <div class="category-header">
+              <div class="category-icon-box">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+                  <line x1="8" y1="21" x2="16" y2="21"></line>
+                  <line x1="12" y1="17" x2="12" y2="21"></line>
+                </svg>
+              </div>
+              <h3 class="category-title">Web Development</h3>
+            </div>
+            <ul class="skill-items-list">
+              <li class="skill-item">
+                <span>HTML5</span>
+                <span class="skill-indicator" aria-hidden="true"></span>
+              </li>
+              <li class="skill-item">
+                <span>CSS3</span>
+                <span class="skill-indicator" aria-hidden="true"></span>
+              </li>
+              <li class="skill-item">
+                <span>JavaScript (ES6+)</span>
+                <span class="skill-indicator" aria-hidden="true"></span>
+              </li>
+              <li class="skill-item">
+                <span>Responsive Design</span>
+                <span class="skill-indicator" aria-hidden="true"></span>
+              </li>
+            </ul>
+          </div>
+
+          <!-- 4. Tools & Platforms -->
+          <div class="glass-card skill-category-card reveal reveal-delay-4">
+            <div class="category-header">
+              <div class="category-icon-box">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"></path>
+                </svg>
+              </div>
+              <h3 class="category-title">Tools &amp; Platforms</h3>
+            </div>
+            <ul class="skill-items-list">
+              <li class="skill-item">
+                <span>Git</span>
+                <span class="skill-indicator" aria-hidden="true"></span>
+              </li>
+              <li class="skill-item">
+                <span>GitHub</span>
+                <span class="skill-indicator" aria-hidden="true"></span>
+              </li>
+              <li class="skill-item">
+                <span>VS Code</span>
+                <span class="skill-indicator" aria-hidden="true"></span>
+              </li>
+              <li class="skill-item">
+                <span>AI Development Tools</span>
+                <span class="skill-indicator" aria-hidden="true"></span>
+              </li>
+            </ul>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- =======================================================================
+         5. PROJECTS SECTION
+         ======================================================================= -->
+    <section class="section" id="projects" aria-label="Featured Projects">
+      <div class="container">
+        <div class="section-header reveal">
+          <div class="section-tag">03 // PROJECTS</div>
+          <h2 class="section-title">Featured Projects &amp; Builds</h2>
+          <p class="section-subtitle">
+            A selection of software applications and technical experiments developed to build hands-on skills.
+          </p>
+        </div>
+
+        <!-- Filter Bar -->
+        <div class="projects-filter-bar reveal">
+          <button class="filter-btn active" data-filter="all">All Projects</button>
+          <button class="filter-btn" data-filter="web">Web Applications</button>
+          <button class="filter-btn" data-filter="ai-data">AI &amp; Data</button>
+          <button class="filter-btn" data-filter="prototype">Prototypes</button>
+        </div>
+
+        <!-- Projects Grid -->
+        <div class="projects-grid">
+          
+          <!-- Project 1: PathBack -->
+          <article class="glass-card project-card reveal" data-category="web">
+            <div class="project-thumbnail">
+              <img src="assets/images/pathback-preview.svg" alt="PathBack Route Tracking Project Preview" class="project-img" loading="lazy">
+              <span class="project-badge-tag">Navigation App</span>
+            </div>
+            <div class="project-content">
+              <h3 class="project-title">PathBack</h3>
+              <p class="project-desc">
+                A mobile-first route tracking and exploration application designed to help users remember where they walked, track their route in real-time, and navigate safely back to their starting point.
+              </p>
+              <div class="project-tech-stack">
+                <span class="tech-tag">HTML5</span>
+                <span class="tech-tag">CSS3</span>
+                <span class="tech-tag">JavaScript</span>
+                <span class="tech-tag">GPS/Maps APIs</span>
+              </div>
+              <div class="project-footer-actions">
+                <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="project-action-link" aria-label="View PathBack source code on GitHub">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+                  </svg>
+                  <span>Code</span>
+                </a>
+                <a href="#" class="project-action-link" aria-label="View PathBack live demo">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                    <polyline points="15 3 21 3 21 9"></polyline>
+                    <line x1="10" y1="14" x2="21" y2="3"></line>
+                  </svg>
+                  <span>Live Demo</span>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 2: Space Explorer -->
+          <article class="glass-card project-card reveal reveal-delay-1" data-category="web">
+            <div class="project-thumbnail">
+              <img src="assets/images/space-explorer-preview.svg" alt="Space Explorer Project Preview" class="project-img" loading="lazy">
+              <span class="project-badge-tag">Educational Web</span>
+            </div>
+            <div class="project-content">
+              <h3 class="project-title">Space Explorer</h3>
+              <p class="project-desc">
+                An educational and interactive space-themed web application presenting immersive information about galaxies, black holes, planets, stars, and key astronomical concepts.
+              </p>
+              <div class="project-tech-stack">
+                <span class="tech-tag">HTML5</span>
+                <span class="tech-tag">CSS3</span>
+                <span class="tech-tag">JavaScript</span>
+                <span class="tech-tag">Astronomy Data</span>
+              </div>
+              <div class="project-footer-actions">
+                <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="project-action-link" aria-label="View Space Explorer source code on GitHub">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+                  </svg>
+                  <span>Code</span>
+                </a>
+                <a href="#" class="project-action-link" aria-label="View Space Explorer live demo">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                    <polyline points="15 3 21 3 21 9"></polyline>
+                    <line x1="10" y1="14" x2="21" y2="3"></line>
+                  </svg>
+                  <span>Live Demo</span>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 3: Handwave (Placeholder / In Progress) -->
+          <article class="glass-card project-card reveal reveal-delay-2" data-category="prototype">
+            <div class="project-thumbnail">
+              <img src="assets/images/handwave-preview.svg" alt="Handwave Gesture Prototype Project Preview" class="project-img" loading="lazy">
+              <span class="project-badge-tag">Prototype • In Development</span>
+            </div>
+            <div class="project-content">
+              <h3 class="project-title">Handwave</h3>
+              <p class="project-desc">
+                An experimental touchless interaction and gesture interface exploration project designed to test novel user interaction patterns and sensor feedback models.
+              </p>
+              <div class="project-tech-stack">
+                <span class="tech-tag">HTML5</span>
+                <span class="tech-tag">CSS3</span>
+                <span class="tech-tag">JavaScript</span>
+                <span class="tech-tag">Gesture UI</span>
+              </div>
+              <div class="project-footer-actions">
+                <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="project-action-link" aria-label="View Handwave source code on GitHub">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+                  </svg>
+                  <span>Code</span>
+                </a>
+                <span class="project-action-link" style="opacity: 0.6; cursor: default;">
+                  <span>In Progress</span>
+                </span>
+              </div>
+            </div>
+          </article>
+
+        </div>
+
+        <!-- View All Projects CTA -->
+        <div class="projects-more-cta reveal">
+          <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
+            <span>View All Projects on GitHub</span>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <line x1="7" y1="17" x2="17" y2="7"></line>
+              <polyline points="7 7 17 7 17 17"></polyline>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- =======================================================================
+         6. EDUCATION SECTION
+         ======================================================================= -->
+    <section class="section" id="education" aria-label="Education and Academic Background">
+      <div class="container">
+        <div class="section-header reveal">
+          <div class="section-tag">04 // EDUCATION</div>
+          <h2 class="section-title">Academic Journey</h2>
+          <p class="section-subtitle">
+            Formal engineering foundations and continuous skill development.
+          </p>
+        </div>
+
+        <div class="education-timeline">
+          
+          <!-- B.Tech Card -->
+          <div class="timeline-item reveal">
+            <div class="timeline-node" aria-hidden="true">
+              <div class="timeline-node-inner"></div>
+            </div>
+            <div class="glass-card timeline-card">
+              <div class="timeline-header">
+                <div>
+                  <h3 class="timeline-degree">B.Tech — Computer Science Engineering</h3>
+                  <div class="timeline-institution">JECRC University</div>
+                </div>
+                <span class="timeline-status-badge">Currently Pursuing • First Year</span>
+              </div>
+              <div class="timeline-body">
+                <p>
+                  <strong>Specialization:</strong> Data Science &amp; Artificial Intelligence
+                </p>
+                <p>
+                  Building comprehensive core competencies across programming, computational mathematics, and fundamental data structures to prepare for advanced AI research and high-performance software engineering.
+                </p>
+                <div class="timeline-highlights">
+                  <span class="tag-pill">Data Structures</span>
+                  <span class="tag-pill">Python for AI</span>
+                  <span class="tag-pill">Discrete Mathematics</span>
+                  <span class="tag-pill">Linear Algebra</span>
+                  <span class="tag-pill">C Programming</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Future Certifications & Milestones Placeholder -->
+          <div class="timeline-item reveal reveal-delay-1">
+            <div class="timeline-node" style="border-color: var(--accent-indigo);" aria-hidden="true">
+              <div class="timeline-node-inner" style="background: var(--accent-indigo);"></div>
+            </div>
+            <div class="glass-card timeline-card">
+              <div class="timeline-header">
+                <div>
+                  <h3 class="timeline-degree">Continuous Learning &amp; Certifications</h3>
+                  <div class="timeline-institution">Self-Directed Study &amp; Workshops</div>
+                </div>
+                <span class="timeline-status-badge" style="border-color: rgba(99, 102, 241, 0.4); color: var(--accent-sky);">Active Learning</span>
+              </div>
+              <div class="timeline-body">
+                <p>
+                  Dedicated to expanding practical technical credentials through online coursework, competitive programming practice, hackathons, and AI development challenges.
+                </p>
+                <div class="timeline-highlights">
+                  <span class="tag-pill">Upcoming ML Certifications</span>
+                  <span class="tag-pill">Hackathons</span>
+                  <span class="tag-pill">Open Source Contributions</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- =======================================================================
+         7. EXPERIENCE / CURRENTLY BUILDING SECTION
+         ======================================================================= -->
+    <section class="section" id="experience" aria-label="Experience and Current Work">
+      <div class="container">
+        <div class="section-header reveal">
+          <div class="section-tag">05 // EXPERIENCE</div>
+          <h2 class="section-title">Currently Building</h2>
+          <p class="section-subtitle">
+            As a first-year student, I focus on practical learning, building software projects, and exploring emerging AI paradigms.
+          </p>
+        </div>
+
+        <div class="building-grid">
+          
+          <!-- Card 1 -->
+          <div class="glass-card building-card reveal">
+            <div class="building-icon-header">
+              <div class="building-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <polyline points="16 18 22 12 16 6"></polyline>
+                  <polyline points="8 6 2 12 8 18"></polyline>
+                </svg>
+              </div>
+              <span class="building-status">Active Workstream</span>
+            </div>
+            <h3 class="building-title">Software &amp; Web Applications</h3>
+            <p class="building-desc">
+              Developing responsive, modern web tools and utility applications with clean architecture, accessible components, and intuitive user experiences.
+            </p>
+            <div class="hero-tags-pill-row" style="justify-content: flex-start;">
+              <span class="tag-pill">HTML/CSS/JS</span>
+              <span class="tag-pill">Clean Code</span>
+              <span class="tag-pill">Responsive UI</span>
+            </div>
+          </div>
+
+          <!-- Card 2 -->
+          <div class="glass-card building-card reveal reveal-delay-1">
+            <div class="building-icon-header">
+              <div class="building-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <circle cx="12" cy="12" r="10"></circle>
+                  <line x1="2" y1="12" x2="22" y2="12"></line>
+                  <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+                </svg>
+              </div>
+              <span class="building-status">Active Workstream</span>
+            </div>
+            <h3 class="building-title">Machine Learning &amp; Data Science</h3>
+            <p class="building-desc">
+              Studying foundational ML models, data manipulation, feature analysis, and data visualization pipelines using Python.
+            </p>
+            <div class="hero-tags-pill-row" style="justify-content: flex-start;">
+              <span class="tag-pill">Python</span>
+              <span class="tag-pill">Data Analytics</span>
+              <span class="tag-pill">Model Training</span>
+            </div>
+          </div>
+
+          <!-- Card 3 -->
+          <div class="glass-card building-card reveal reveal-delay-2">
+            <div class="building-icon-header">
+              <div class="building-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"></path>
+                </svg>
+              </div>
+              <span class="building-status">Active Workstream</span>
+            </div>
+            <h3 class="building-title">Generative AI &amp; AI Agents</h3>
+            <p class="building-desc">
+              Experimenting with autonomous agent architectures, prompt orchestration, and LLM-powered toolchains to create intelligent workflows.
+            </p>
+            <div class="hero-tags-pill-row" style="justify-content: flex-start;">
+              <span class="tag-pill">GenAI</span>
+              <span class="tag-pill">AI Automation</span>
+              <span class="tag-pill">Agents</span>
+            </div>
+          </div>
+
+          <!-- Card 4 -->
+          <div class="glass-card building-card reveal reveal-delay-3">
+            <div class="building-icon-header">
+              <div class="building-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <polygon points="12 2 2 7 12 12 22 7 12 2"></polygon>
+                  <polyline points="2 17 12 22 22 17"></polyline>
+                  <polyline points="2 12 12 17 22 12"></polyline>
+                </svg>
+              </div>
+              <span class="building-status">Active Workstream</span>
+            </div>
+            <h3 class="building-title">DSA &amp; Problem Solving</h3>
+            <p class="building-desc">
+              Practicing fundamental algorithmic problem solving, time complexity optimization, and data structure implementations.
+            </p>
+            <div class="hero-tags-pill-row" style="justify-content: flex-start;">
+              <span class="tag-pill">C / Python</span>
+              <span class="tag-pill">Algorithms</span>
+              <span class="tag-pill">Problem Solving</span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- =======================================================================
+         8. BUILDING IN PUBLIC / GITHUB SECTION
+         ======================================================================= -->
+    <section class="section" id="github-activity" aria-label="GitHub Activity">
+      <div class="container">
+        <div class="section-header reveal">
+          <div class="section-tag">06 // BUILDING IN PUBLIC</div>
+          <h2 class="section-title">Open Source &amp; Code Activity</h2>
+          <p class="section-subtitle">
+            Sharing progress, experimenting with code, and documenting the developer journey in public.
+          </p>
+        </div>
+
+        <div class="github-wrapper">
+          
+          <!-- GitHub Profile Overview Card -->
+          <div class="glass-card github-profile-card reveal">
+            <div class="github-profile-header">
+              <div class="github-avatar-box">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+                </svg>
+              </div>
+              <div>
+                <div class="github-name">Varun Sharma</div>
+                <div class="github-handle">@varunsharma</div>
+              </div>
+            </div>
+
+            <p class="github-statement">
+              "Building projects in the open is my preferred way of learning. Every commit represents a newly discovered technique, fixed bug, or architectural improvement."
+            </p>
+
+            <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="btn btn-primary" style="width: 100%;">
+              <span>Explore GitHub Repositories</span>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                <polyline points="15 3 21 3 21 9"></polyline>
+                <line x1="10" y1="14" x2="21" y2="3"></line>
+              </svg>
+            </a>
+          </div>
+
+          <!-- Dynamic / Static Repository Feed -->
+          <div class="github-repos-container" id="github-repos-list">
+            
+            <!-- Fallback Static Repo 1 -->
+            <div class="glass-card repo-card reveal reveal-delay-1">
+              <div class="repo-card-header">
+                <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="repo-title">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path>
+                    <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path>
+                  </svg>
+                  <span>pathback-tracker</span>
+                </a>
+                <span class="repo-badge">Public</span>
+              </div>
+              <p class="repo-desc">
+                Mobile-first route recording and return navigation utility using browser geolocation APIs.
+              </p>
+              <div class="repo-meta">
+                <span class="repo-lang">
+                  <span class="repo-lang-dot" style="background: #f1e05a;"></span>
+                  <span>JavaScript</span>
+                </span>
+                <span>★ 0</span>
+                <span>Updated recently</span>
+              </div>
+            </div>
+
+            <!-- Fallback Static Repo 2 -->
+            <div class="glass-card repo-card reveal reveal-delay-2">
+              <div class="repo-card-header">
+                <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="repo-title">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path>
+                    <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path>
+                  </svg>
+                  <span>space-explorer-web</span>
+                </a>
+                <span class="repo-badge">Public</span>
+              </div>
+              <p class="repo-desc">
+                Interactive cosmic visualization and educational exploration web application.
+              </p>
+              <div class="repo-meta">
+                <span class="repo-lang">
+                  <span class="repo-lang-dot" style="background: #e34c26;"></span>
+                  <span>HTML / CSS</span>
+                </span>
+                <span>★ 0</span>
+                <span>Updated recently</span>
+              </div>
+            </div>
+
+            <!-- Fallback Static Repo 3 -->
+            <div class="glass-card repo-card reveal reveal-delay-3">
+              <div class="repo-card-header">
+                <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="repo-title">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path>
+                    <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path>
+                  </svg>
+                  <span>ai-agent-prototypes</span>
+                </a>
+                <span class="repo-badge">Public</span>
+              </div>
+              <p class="repo-desc">
+                Exploratory Python scripts and prompt chains for autonomous agent tasks.
+              </p>
+              <div class="repo-meta">
+                <span class="repo-lang">
+                  <span class="repo-lang-dot" style="background: #3572A5;"></span>
+                  <span>Python</span>
+                </span>
+                <span>★ 0</span>
+                <span>Updated recently</span>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- =======================================================================
+         9. CONTACT SECTION
+         ======================================================================= -->
+    <section class="section" id="contact" aria-label="Contact Varun Sharma">
+      <div class="container">
+        <div class="section-header reveal">
+          <div class="section-tag">07 // CONTACT</div>
+          <h2 class="section-title">Let's Build Something</h2>
+          <p class="section-subtitle">
+            Have an idea, opportunity, or interesting problem to solve? I'd love to connect.
+          </p>
+        </div>
+
+        <div class="contact-grid">
+          
+          <!-- Contact Channels List -->
+          <div class="contact-info-col reveal">
+            <a href="mailto:varun.sharma.dev@example.com" class="glass-card contact-card-item" aria-label="Send email to Varun Sharma">
+              <div class="contact-icon-box">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                  <polyline points="22,6 12,13 2,6"></polyline>
+                </svg>
+              </div>
+              <div>
+                <div class="contact-card-label">Direct Email</div>
+                <div class="contact-card-val">varun.sharma.dev@example.com</div>
+              </div>
+            </a>
+
+            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="glass-card contact-card-item" aria-label="Connect on LinkedIn">
+              <div class="contact-icon-box">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+                  <rect x="2" y="9" width="4" height="12"></rect>
+                  <circle cx="4" cy="4" r="2"></circle>
+                </svg>
+              </div>
+              <div>
+                <div class="contact-card-label">LinkedIn</div>
+                <div class="contact-card-val">linkedin.com/in/varunsharma</div>
+              </div>
+            </a>
+
+            <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="glass-card contact-card-item" aria-label="Explore GitHub Profile">
+              <div class="contact-icon-box">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+                </svg>
+              </div>
+              <div>
+                <div class="contact-card-label">GitHub</div>
+                <div class="contact-card-val">github.com/varunsharma</div>
+              </div>
+            </a>
+
+            <div class="glass-card contact-card-item" style="cursor: default;">
+              <div class="contact-icon-box" style="color: var(--accent-purple); border-color: rgba(139, 92, 246, 0.3);">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                  <circle cx="12" cy="10" r="3"></circle>
+                </svg>
+              </div>
+              <div>
+                <div class="contact-card-label">Location</div>
+                <div class="contact-card-val">Jaipur, Rajasthan, India</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Interactive Contact Form -->
+          <div class="glass-card contact-form-card reveal reveal-delay-1">
+            <form id="contact-form" novalidate>
+              
+              <div class="form-group" id="group-name">
+                <label for="contact-name" class="form-label">Your Name *</label>
+                <input type="text" id="contact-name" name="name" class="form-input" placeholder="e.g. Alex Mercer" required autocomplete="name">
+                <div class="form-error" id="error-name">Please enter your name.</div>
+              </div>
+
+              <div class="form-group" id="group-email">
+                <label for="contact-email" class="form-label">Your Email *</label>
+                <input type="email" id="contact-email" name="email" class="form-input" placeholder="e.g. alex@example.com" required autocomplete="email">
+                <div class="form-error" id="error-email">Please enter a valid email address.</div>
+              </div>
+
+              <div class="form-group" id="group-subject">
+                <label for="contact-subject" class="form-label">Subject</label>
+                <input type="text" id="contact-subject" name="subject" class="form-input" placeholder="e.g. Collaboration / Project Inquiry">
+              </div>
+
+              <div class="form-group" id="group-message">
+                <label for="contact-message" class="form-label">Message *</label>
+                <textarea id="contact-message" name="message" class="form-textarea" placeholder="Describe your idea, project, or question..." required></textarea>
+                <div class="form-error" id="error-message">Please enter a message (at least 10 characters).</div>
+              </div>
+
+              <button type="submit" class="btn btn-primary" style="width: 100%;" id="btn-submit">
+                <span>Send Message</span>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <line x1="22" y1="2" x2="11" y2="13"></line>
+                  <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+                </svg>
+              </button>
+
+              <!-- Live Form Submission Alert Notice -->
+              <div class="form-alert" id="form-alert" role="status" aria-live="polite"></div>
+            </form>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- =========================================================================
+       10. FOOTER
+       ========================================================================= -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <div class="footer-brand-title">VARUN SHARMA</div>
+          <p class="footer-tagline">
+            Building, learning, and experimenting with software, data, and artificial intelligence.
+          </p>
+        </div>
+
+        <div class="footer-socials" aria-label="Footer Social Links">
+          <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="footer-social-btn" aria-label="GitHub">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+            </svg>
+          </a>
+          <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="footer-social-btn" aria-label="LinkedIn">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+              <rect x="2" y="9" width="4" height="12"></rect>
+              <circle cx="4" cy="4" r="2"></circle>
+            </svg>
+          </a>
+          <a href="mailto:varun.sharma.dev@example.com" class="footer-social-btn" aria-label="Email">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+              <polyline points="22,6 12,13 2,6"></polyline>
+            </svg>
+          </a>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>&copy; 2026 Varun Sharma. All rights reserved.</div>
+        <div>Crafted with HTML5, CSS3, &amp; Vanilla JavaScript</div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Floating Back to Top Button -->
+  <button id="back-to-top" aria-label="Back to top of page">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+      <polyline points="18 15 12 9 6 15"></polyline>
+    </svg>
+  </button>
+
+  <!-- Core JavaScript File -->
+  <script src="script.js"></script>
+</body>
+</html>
