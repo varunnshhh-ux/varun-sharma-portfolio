@@ -380,7 +380,7 @@
     if (!reposContainer) return;
 
     // Default GitHub username (can be updated to Varun's actual GitHub profile handle)
-    const githubUsername = 'varunsharma';
+    const githubUsername = 'varunnshhh-ux';
 
     // Optional API fetch: falls back gracefully if network unavailable or rate-limited
     fetch(`https://api.github.com/users/${githubUsername}/repos?sort=updated&per_page=3`, {
