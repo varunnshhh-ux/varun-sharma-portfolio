@@ -542,7 +542,7 @@
         alertBox.className = 'form-alert success';
         alertBox.innerHTML = `
           <strong>Thank you, ${escapeInput(nameInput.value.trim())}!</strong><br>
-          Your message has been received in this client-side demo. For immediate inquiries, you can reach Varun directly via email at <a href="mailto:varun.sharma.dev@example.com" style="text-decoration: underline; color: #ffffff;">varun.sharma.dev@example.com</a> or on <a href="https://linkedin.com" target="_blank" style="text-decoration: underline; color: #ffffff;">LinkedIn</a>.
+          Your message has been received in this client-side demo. For immediate inquiries, you can reach Varun directly via email at <a href="mailto:varunnshhh@outlook.com" style="text-decoration: underline; color: #ffffff;">varunnshhh@outlook.com</a> or on <a href="https://linkedin.com" target="_blank" style="text-decoration: underline; color: #ffffff;">LinkedIn</a>.
         `;
 
         form.reset();
