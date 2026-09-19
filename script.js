@@ -252,6 +252,18 @@
         });
       });
     }
+
+    // Scroll Down Indicator Click Listener
+    const heroScrollDown = document.getElementById('hero-scroll-down');
+    if (heroScrollDown) {
+      heroScrollDown.addEventListener('click', (e) => {
+        e.preventDefault();
+        const aboutSection = document.getElementById('about');
+        if (aboutSection) {
+          aboutSection.scrollIntoView({ behavior: 'smooth' });
+        }
+      });
+    }
   }
 
   /* --------------------------------------------------------------------------
