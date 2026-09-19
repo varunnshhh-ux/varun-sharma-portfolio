@@ -634,6 +634,46 @@
   }
 
   /* --------------------------------------------------------------------------
+     11. Botpress "Talk to Varun's AI" Trigger
+     -------------------------------------------------------------------------- */
+  function initBotpressTrigger() {
+    const chatBtn = document.getElementById('open-ai-chat-btn');
+    if (!chatBtn) return;
+
+    chatBtn.addEventListener('click', (e) => {
+      e.preventDefault();
+      
+      // 1. Try standard Botpress v5 API
+      if (window.botpress && typeof window.botpress.open === 'function') {
+        window.botpress.open();
+        return;
+      }
+      
+      // 2. Try Botpress WebChat event API
+      if (window.botpressWebChat && typeof window.botpressWebChat.sendEvent === 'function') {
+        window.botpressWebChat.sendEvent({ type: 'show' });
+        return;
+      }
+
+      // 3. Fallback: query and click Botpress trigger element in DOM
+      const bpTrigger = document.querySelector('.bpw-floating-button, [aria-label*="chat" i], [aria-label*="botpress" i], button[id*="bp-webchat"]');
+      if (bpTrigger) {
+        bpTrigger.click();
+      } else {
+        // Delayed retry if widget is still mounting
+        setTimeout(() => {
+          if (window.botpress && typeof window.botpress.open === 'function') {
+            window.botpress.open();
+          } else {
+            const retryTrigger = document.querySelector('.bpw-floating-button, [aria-label*="chat" i], button[id*="bp-webchat"]');
+            if (retryTrigger) retryTrigger.click();
+          }
+        }, 500);
+      }
+    });
+  }
+
+  /* --------------------------------------------------------------------------
      DOM Ready Initialization
      -------------------------------------------------------------------------- */
   document.addEventListener('DOMContentLoaded', () => {
@@ -647,6 +687,7 @@
     initContactForm();
     initCursorGlow();
     initScrollReveals();
+    initBotpressTrigger();
   });
 
 })();
