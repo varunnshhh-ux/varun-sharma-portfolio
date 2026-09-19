@@ -1813,11 +1813,11 @@ button, input, textarea {
   color: var(--text-muted);
 }
 
-/* Floating Back-to-Top Button */
+/* Floating Back-to-Top Button (positioned above floating chatbot widget) */
 #back-to-top {
   position: fixed;
-  bottom: 30px;
-  right: 30px;
+  bottom: 90px;
+  right: 28px;
   width: 44px;
   height: 44px;
   border-radius: var(--radius-sm);
@@ -1977,7 +1977,7 @@ button, input, textarea {
   }
 
   #back-to-top {
-    bottom: 20px;
+    bottom: 85px;
     right: 20px;
   }
 }
